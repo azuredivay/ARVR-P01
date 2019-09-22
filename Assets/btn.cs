@@ -7,6 +7,7 @@ public class btn : MonoBehaviour, IVirtualButtonEventHandler
 {
     public AudioClip MusicClip;
     public AudioSource MusicSource;
+    VirtualButtonBehaviour[] virtualButtonBehaviours;
     public void OnButtonPressed(VirtualButtonBehaviour vb)
     {
         //throw new System.NotImplementedException();
@@ -23,6 +24,9 @@ public class btn : MonoBehaviour, IVirtualButtonEventHandler
     // Start is called before the first frame update
     void Start()
     {
+        virtualButtonBehaviours = GetComponentsInChildren<VirtualButtonBehaviour>();
+ 
+        for (int i = 0; i < virtualButtonBehaviours.Length; i++) virtualButtonBehaviours[i].RegisterEventHandler(this);
         MusicSource.clip = MusicClip;
     }
 
