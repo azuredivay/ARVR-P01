@@ -16,18 +16,17 @@ public class toggleBack : MonoBehaviour, IVirtualButtonEventHandler
 
     public void OnButtonReleased(VirtualButtonBehaviour vb)
     {
-        if (Reviews.active)
+        if (Reviews.activeSelf)
         {
             BookInfo.SetActive(true);
             Reviews.SetActive(false);
         }
-        else if (BookInfo.active)
+        else if (BookInfo.activeSelf)
         {
             BookInfo.SetActive(false);
             Reviews.SetActive(true);
         }
         Debug.Log("BACK REL");
-        //MusicSource.Play();
 
     }
     // Start is called before the first frame update
