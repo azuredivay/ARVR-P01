@@ -33,6 +33,7 @@ public class btn : MonoBehaviour, IVirtualButtonEventHandler
     // Start is called before the first frame update
     void Start()
     {
+        mickey.SetActive(true);
         MusicSource.clip = MusicClip;
     }
 

@@ -32,7 +32,7 @@ public class toggleBack : MonoBehaviour, IVirtualButtonEventHandler
     // Start is called before the first frame update
     void Start()
     {
-        
+        BookInfo.SetActive(false);
     }
 
     // Update is called once per frame
